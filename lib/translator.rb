@@ -2,7 +2,7 @@
 require 'pry'
 require 'yaml'
 def load_library(filepath)
-  @emoticons_hash = YAML.load_file (filepath)
+  emoticons_hash = YAML.load_file (filepath)
   puts emoticons_hash.inspect
 
   language_hash = {}
@@ -13,7 +13,6 @@ def load_library(filepath)
     language_hash[emoticon][:japanese] = emoticons_hash[emoticon][1]
   end
   emoticons_hash = language_hash
-<<<<<<< HEAD
   emoticons_hash
 end
 
@@ -28,7 +27,6 @@ def get_japanese_emoticon(filepath, emoticon)
     end
     return reply
   end
-=======
 end
 
 def get_japanese_emoticon(load_library, filepath, emoticon)
